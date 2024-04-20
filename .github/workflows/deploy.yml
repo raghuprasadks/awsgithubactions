@@ -20,9 +20,9 @@ jobs:
 
     - name: Deploy to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@13.233.136.74 <<EOF
-          cd /home/ubuntu/githubactions
+        ssh -o StrictHostKeyChecking=no ubuntu@13.233.136.74
+          cd /home/ubuntu/githubactions/awsgithubactions
           git pull
           pip install -r requirements.txt
           flask run --host=0.0.0.0
-        EOF
+        
